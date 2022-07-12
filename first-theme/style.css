@@ -1,0 +1,101 @@
+/* Styles for first Wordpress Website
+Name: First Theme
+Author: Brandon Davila
+Date: July 3rd, 2022
+
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D5F2E3;
+}
+
+header {
+    background-color: chocolate;
+    /* height: 200px; */
+}
+
+#top {
+    height: 60px;
+    background-color: aliceblue;
+}
+
+#inner-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: bisque;
+    height: 100px;
+}
+
+/* this is our hero image */
+#hero {
+    height: 400px;
+    background-color: cadetblue;
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+main {
+    width: 62%;
+    float: left;
+}
+
+footer {
+    height: 300px;
+    background-color: cornsilk;
+    clear: both;
+}
+
+/* typography */
+p {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2em;
+}
+
+.meta span {
+    display: block;
+    font-style: italic;
+}
+
+/* comment form css */
+
+#commentform {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border-radius: 10px;
+}
+
+.commentlist {
+    margin: 10px 10px 20px 40px;
+}
+
+.comment-notes {
+    font-size: .9em;
+    font-style: italic;
+    color: darkgreen;
+    margin-bottom: 6px;
+}
+
+label {
+    display: block;
+}
+
+.comment-form-cookies-consent label {
+    display: inline;
+}
+
+.comment-form p {
+    margin-bottom: 10px;
+}
