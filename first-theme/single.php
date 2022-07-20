@@ -1,6 +1,8 @@
 <?php get_header();?>
 <!-- single.php displays a single blog post  -->
-
+<div id="hero">
+    <img src="<?php echo get_template_directory_uri() ;?>/images/limgrave.jpg" alt="Gargantuan golden tree named, 'The Erdtree'. The tree is surrounded by many ruins scattered throught the lands below the tree. ">
+</div>
 <div id="wrapper">
 
 

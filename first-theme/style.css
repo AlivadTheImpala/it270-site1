@@ -17,30 +17,83 @@ body {
 
 header {
     background-color: chocolate;
-    /* height: 200px; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 #top {
-    height: 60px;
+    padding: 10px 30px 20px 10px;
     background-color: aliceblue;
+    overflow: hidden;
 }
 
 #inner-header {
     max-width: 1200px;
     margin: 0 auto;
     background-color: bisque;
-    height: 100px;
+    padding: 10px 20px 10px 0;
+    clear: both;
+
+}
+
+.nav-button {
+    display: none;
+}
+
+#inner-header img {
+    width: 100%;
+    max-width: 80px;
+}
+
+main {
+    width: 62%;
+    float: left;
+}
+
+aside {
+    float: right;
+    width: 35%;
+    height: 400px;
+    background-color: burlywood;
 }
 
 /* this is our hero image */
 #hero {
-    height: 400px;
+
     background-color: cadetblue;
+}
+
+.home #hero {
+    background-image: url(https://www.nodnarbalivad.com/it270/site1/wp-content/uploads/liurnia-of-the-lakes.jpg);
+    background-size: cover;
+    min-height: 550px;
+    max-width: 100%;
+    background-repeat: no-repeat;
+}
+
+.inner-page #hero {
+    background-image: url(https://www.nodnarbalivad.com/it270/site1/wp-content/uploads/limgrave.jpg);
+    background-size: cover;
+    min-height: 550px;
+    max-width: 100%;
+    background-repeat: no-repeat;
+}
+
+#hero img {
+    display: none;
+    width: 100%;
 }
 
 #wrapper {
     max-width: 1200px;
     margin: 20px auto;
+}
+
+.error404 #wrapper,
+.search #wrapper {
+    margin: 30% auto 0 auto;
 }
 
 main {
@@ -53,6 +106,67 @@ footer {
     background-color: cornsilk;
     clear: both;
 }
+
+#site-navigation {
+    float: right;
+
+}
+
+#site-navigation li {
+    float: left;
+    list-style: none;
+    margin-left: 15px;
+
+}
+
+#site-navigation li a {
+    text-decoration: none;
+    padding: 5px;
+}
+
+.sub-menu {
+    display: none;
+}
+
+
+
+
+
+#site-navigation li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    background-color: #609ea0;
+    padding: 5px;
+
+    width: 180px;
+}
+
+#site-navigation li:hover .sub-menu li {
+    margin-left: 0;
+    float: none;
+}
+
+/* Classes and IDs */
+.screen-reader-text {
+    display: none;
+}
+
+
+#top #searchform {
+    float: right;
+}
+
+.post,
+.posts {
+    margin-bottom: 25px;
+}
+
+.meta {
+    margin-bottom: 10px;
+}
+
+/* End classes and Ids */
+
 
 /* typography */
 p {
@@ -67,6 +181,8 @@ p {
     display: block;
     font-style: italic;
 }
+
+/* end typography */
 
 /* comment form css */
 
@@ -99,3 +215,183 @@ label {
 .comment-form p {
     margin-bottom: 10px;
 }
+
+
+
+/* Media Queries Start Here */
+
+
+@media screen and (max-width:450px) {
+    .home #hero {
+        background-image: none;
+        margin-top: 100px;
+        min-height: auto;
+    }
+
+    .inner-page #hero {
+        background-image: none;
+        margin-top: 100px;
+        min-height: auto;
+    }
+
+    #hero img {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    /* Navigation Button
+	-------------------------------------------------------- */
+
+    .nav-button {
+        display: block;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 50px;
+        height: 35px;
+        background: url('images/menu-icon-large.png'), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .2));
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 21px, 100%;
+        cursor: pointer;
+        border: 0 none;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        box-shadow: 0 0 4px rgba(0, 0, 0, .7) inset;
+        border-radius: 5px;
+        z-index: 999;
+        text-indent: -9999px;
+    }
+
+    .nav-button:hover {
+        background-color: rgba(0, 0, 0, .1);
+    }
+
+    .nav-button.open {
+        background: url('images/close-icon-large.png'), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .2));
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 21px, 100%;
+    }
+
+    /* Navigation Bar
+	-------------------------------------------------------- */
+
+    body {
+        padding-top: 50px;
+    }
+
+    .primary-nav {
+        width: 100%;
+        float: none;
+        background-color: #609ea0;
+        /* change the menu color */
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .2));
+        display: block;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 998;
+        clear: both;
+    }
+
+    /* My Navigation styles */
+    #site-navigation li {
+        float: none;
+        margin-left: 0;
+    }
+
+    .primary-nav li {
+        display: none;
+        width: 100%;
+        font-family: Arial;
+    }
+
+    #site-navigation li:hover .sub-menu {
+        width: auto;
+        position: static;
+        background-color: none;
+        padding: 0;
+    }
+
+    /* End my nav styles */
+
+    .primary-nav li a {
+        display: block;
+        width: 100%;
+        padding: 10px 5%;
+        font-size: 14px;
+        font-weight: bold;
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, .15);
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        border-top: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .primary-nav li a:hover {
+        background-color: rgba(0, 0, 0, .5);
+        border-top-color: transparent;
+    }
+
+    .primary-nav > li:first-child {
+        border-top: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    /* Toggle the navigation bar open  */
+
+    .primary-nav.open {
+        height: auto;
+        padding-top: 50px;
+    }
+
+    .primary-nav.open li {
+        display: block;
+    }
+
+    /* Submenus – optional .parent class indicates dropdowns */
+
+    .primary-nav > li:hover > a {
+        background: rgba(0, 0, 0, .5);
+        border-bottom-color: transparent;
+    }
+
+    .primary-nav li.parent > a:after {
+        content: "▼";
+        color: rgba(255, 255, 255, .5);
+        float: right;
+    }
+
+    .primary-nav li.parent > a:hover {
+        background: rgba(0, 0, 0, .75);
+    }
+
+    .primary-nav li ul {
+        display: none;
+        background: rgba(0, 0, 0, .5);
+        border-top: 0 none;
+        padding: 0;
+    }
+
+    .primary-nav li ul a {
+        border: 0 none;
+        font-size: 12px;
+        padding: 10px 5%;
+        font-weight: normal;
+    }
+
+    .primary-nav li:hover ul {
+        display: block;
+        border-top: 0 none;
+    }
+
+}
+
+/* End Mobile Styles */

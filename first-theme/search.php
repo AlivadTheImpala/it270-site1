@@ -1,11 +1,9 @@
 <?php get_header();?>
 <!-- In wordpress the 'index.php' page is assigned to the 'blog page' for all posts -->
-<div id="hero">
-    <img src="<?php echo get_template_directory_uri() ;?>/images/limgrave.jpg" alt="Gargantuan golden tree named, 'The Erdtree'. The tree is surrounded by many ruins scattered throught the lands below the tree. ">
-</div>
+
 <div id="wrapper">
 
-
+<!-- Well add a happy picture here -->
     <main>
 
         <!-- our question of the day is
@@ -14,7 +12,13 @@
         <?php if(have_posts()) :?>
 
         <!-- We need to show the posts by using a while loop in the world of PHP -->
-        
+        <h2>Search Results for: <?php echo get_search_query();?></h2>
+        <!-- Well add how many pages exist with user defined search words -->
+
+        <p>Our findings for
+            <?php /* Search Count */
+            $allsearch = new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('articles/pages'); wp_reset_query(); ?></p>
+
         <?php while(have_posts()) : the_post(); ?>
             <article class="post">
                 <h2 class="title">
@@ -36,7 +40,7 @@
                 <div class="thumbnails">
                     <?php if(has_post_thumbnail()) :?>
                     <a href="<?php the_permalink();  ?>">
-                        <?php the_post_thumbnail(); ?>
+                     <?php the_post_thumbnail(); ?>
                     </a>
                     <?php endif ?>
 
@@ -58,7 +62,7 @@
         <?php else:?>
             
         <h2>
-            Search Results
+            No content for: <?php echo get_search_query();?>
         </h2>
         <p>
             Sorry, nothing came up. Try searching for different keywords.
@@ -68,7 +72,7 @@
     </main>
 
     <aside>
-        this is my index.php page
+        this is my search.php page
     </aside>
 
 
