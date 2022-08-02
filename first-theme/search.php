@@ -71,9 +71,7 @@
         <?php endif; ?>
     </main>
 
-    <aside>
-        this is my search.php page
-    </aside>
+    <?php get_sidebar();?>
 
 
 

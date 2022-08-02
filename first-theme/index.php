@@ -66,11 +66,10 @@
         <?php get_search_form();?>
         <?php endif; ?>
     </main>
-
-    <aside>
-        this is my index.php page
-    </aside>
-
+    
+    <?php get_sidebar();?>
+    
+    
 
 
 

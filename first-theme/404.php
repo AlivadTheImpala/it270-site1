@@ -12,8 +12,8 @@
         <?php wp_list_pages();?>
     </main>
 
-    <aside>
-        this is my 404 page
+    <aside id="secondary" class="widget-area">
+        <?php dynamic_sidebar('sidebar-404') ;?>
     </aside>
 
 

@@ -12,30 +12,135 @@ Date: July 3rd, 2022
 }
 
 body {
-    background-color: #D5F2E3;
+    background-color: #E4D6A7;
 }
 
 header {
-    background-color: chocolate;
+    /* background-color: chocolate; */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.home h2 {
+    text-align: center;
+    font-size: 2.4em;
+}
+
 #top {
     padding: 10px 30px 20px 10px;
-    background-color: aliceblue;
+    background-color: #2f0035;
     overflow: hidden;
 }
 
 #inner-header {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: bisque;
-    padding: 10px 20px 10px 0;
+    max-width: 1230px;
+    margin: 5px auto;
+    background-color: #919ec9;
+    padding: 5px 30px 2px 0px;
     clear: both;
 
+}
+
+.inner-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    clear: both;
+    background-color: #2f0035;
+    color: #e4d7a7;
+    text-align: center;
+
+
+}
+
+.inner-footer h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+/* .inner-footer .third {
+    text-align: center;
+} */
+
+.inner-footer ul {
+    height: 60px;
+    line-height: 60px;
+    font-size: .875em;
+    list-style: none;
+
+}
+
+.inner-footer a {
+    color: #ffc900;
+    text-decoration: none;
+}
+
+.inner-footer a:hover {
+    text-decoration: underline;
+    color: #919ec9;
+}
+
+.inner-footer li {
+    float: left;
+    margin-right: 25px;
+}
+
+.row {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.row p {
+    font-size: .92em;
+}
+
+.third {
+    width: 31.91%;
+    float: left;
+    margin-right: 2.12%;
+    padding: 0 1%;
+
+}
+
+.col8 {
+    float: left;
+    width: 48.93%;
+}
+
+.col8:last-of-type {
+    float: right;
+
+}
+
+#wrapper .third {
+
+    padding: 0;
+
+}
+
+
+.third h3,
+.col8 h3 {
+    margin-bottom: 15px;
+    font-size: 1.35em;
+}
+
+.third:last-of-type {
+    margin-right: 0;
 }
 
 .nav-button {
@@ -44,7 +149,8 @@ header {
 
 #inner-header img {
     width: 100%;
-    max-width: 80px;
+    max-width: 40px;
+    margin-left: 10px;
 }
 
 main {
@@ -55,8 +161,73 @@ main {
 aside {
     float: right;
     width: 35%;
-    height: 400px;
-    background-color: burlywood;
+    /* height: 400px; */
+    /* background-color: #919ec9; */
+}
+
+.inner-widget h3 {
+    background: #2f0035;
+    color: #E9B44C;
+    font-size: 1.4em;
+    padding: 3%;
+    margin-bottom: 10px;
+
+}
+
+.inner-tours {
+    background-color: #D3BE73;
+    padding: 3%;
+
+}
+
+.inner-specials {
+    margin: 10px 0 20px 0;
+    padding: 3%;
+    border: 2px solid #2f0035;
+    border-radius: 2.5px;
+}
+
+.inner-buy {
+    clear: both;
+    border: 2px solid #2f0035;
+    border-radius: 2.5px;
+}
+
+.inner-tours h3 {
+    color: #ae4a00;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.inner-tours a {
+    border-bottom: 1px solid;
+}
+
+.inner-tours li {
+    margin: 0 0 10px 0;
+}
+
+aside a {
+    text-decoration: none;
+    color: #2f0035;
+    padding: 3px 3px;
+}
+
+aside a:hover {
+
+    border: 2px solid;
+    border-radius: 4px;
+    box-shadow: 3px 4px 0 #2f0035;
+}
+
+.widget-area ul {
+    list-style: none;
+    margin-left: 5%;
+    margin-bottom: 12px;
+}
+
+.widget-area li {
+    padding: 4px;
 }
 
 /* this is our hero image */
@@ -68,17 +239,34 @@ aside {
 .home #hero {
     background-image: url(https://www.nodnarbalivad.com/it270/site1/wp-content/uploads/liurnia-of-the-lakes.jpg);
     background-size: cover;
-    min-height: 550px;
-    max-width: 100%;
+
     background-repeat: no-repeat;
+    min-height: 600px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+
 }
 
+/* This is the post thumbnail image on the tours page */
+main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
 .inner-page #hero {
-    background-image: url(https://www.nodnarbalivad.com/it270/site1/wp-content/uploads/limgrave.jpg);
+    background-image: url(https://www.nodnarbalivad.com/it270/site1/wp-content/uploads/erdtree.jpeg);
     background-size: cover;
-    min-height: 550px;
-    max-width: 100%;
     background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    min-height: 580px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #hero img {
@@ -88,12 +276,14 @@ aside {
 
 #wrapper {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 20px auto 90px auto;
+    color: #2f0035;
+    ;
 }
 
 .error404 #wrapper,
 .search #wrapper {
-    margin: 30% auto 0 auto;
+    margin: 140px auto 0 auto;
 }
 
 main {
@@ -102,7 +292,7 @@ main {
 }
 
 footer {
-    height: 300px;
+
     background-color: cornsilk;
     clear: both;
 }
@@ -121,11 +311,31 @@ footer {
 
 #site-navigation li a {
     text-decoration: none;
-    padding: 5px;
+    padding: 2px 3px;
+    color: #2f0035;
+
+}
+
+#site-navigation li a:hover {
+    border: 1px solid #2f0035;
+    border-radius: 5px;
+    box-shadow: 3px 4px 0 #2f0035;
+
+
 }
 
 .sub-menu {
     display: none;
+    border: 2px solid #2f0035;
+    border-radius: 3px;
+}
+
+.sub-menu li {
+    margin: 10px 5px;
+}
+
+.sub-menu a {
+    margin: 0 0 0 10px;
 }
 
 
@@ -135,15 +345,17 @@ footer {
 #site-navigation li:hover .sub-menu {
     display: block;
     position: absolute;
-    background-color: #609ea0;
-    padding: 5px;
+    background-color: #E9B44C;
+    width: 358px;
+    right: 5px;
+    height: auto;
 
-    width: 180px;
 }
 
 #site-navigation li:hover .sub-menu li {
     margin-left: 0;
     float: none;
+    line-height: 1.4;
 }
 
 /* Classes and IDs */
@@ -161,6 +373,20 @@ footer {
     margin-bottom: 25px;
 }
 
+
+
+
+.post a {
+    text-decoration: none;
+    color: #2f0035;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+
+
 .meta {
     margin-bottom: 10px;
 }
@@ -169,6 +395,26 @@ footer {
 
 
 /* typography */
+.home h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+
+
+}
+
+.third span a {
+    display: block;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+.third span a:hover {
+    color: #919ec9;
+}
+
 p {
     margin-bottom: 20px;
 }
@@ -222,15 +468,28 @@ label {
 
 
 @media screen and (max-width:450px) {
+    #inner-header {
+
+
+        padding: 10px 25px 10px 25px;
+
+
+    }
+
+    #wrapper {
+        max-width: 1200px;
+        margin: 30px;
+    }
+
     .home #hero {
         background-image: none;
-        margin-top: 100px;
+        margin-top: 84px;
         min-height: auto;
     }
 
     .inner-page #hero {
         background-image: none;
-        margin-top: 100px;
+        margin-top: 84px;
         min-height: auto;
     }
 
@@ -286,7 +545,7 @@ label {
     .primary-nav {
         width: 100%;
         float: none;
-        background-color: #609ea0;
+        background-color: #2f0035;
         /* change the menu color */
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .2));
         display: block;
@@ -308,6 +567,21 @@ label {
         margin-left: 0;
     }
 
+    #site-navigation li a {
+        color: #E9B44C;
+    }
+
+    #site-navigation li:hover .sub-menu a {
+        color: #2f0035;
+
+    }
+
+    #site-navigation li:hover .sub-menu a:hover {
+        color: #e4d7a7;
+
+    }
+
+
     .primary-nav li {
         display: none;
         width: 100%;
@@ -317,7 +591,7 @@ label {
     #site-navigation li:hover .sub-menu {
         width: auto;
         position: static;
-        background-color: none;
+
         padding: 0;
     }
 
