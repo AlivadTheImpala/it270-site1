@@ -23,6 +23,8 @@ header {
     width: 100%;
 }
 
+
+
 img {
     max-width: 100%;
     height: auto;
@@ -34,9 +36,17 @@ h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.contact h1 {
+    text-align: center;
+}
+
 .home h2 {
     text-align: center;
     font-size: 2.4em;
+}
+
+.home #wrapper {
+    padding: 20px;
 }
 
 #top {
@@ -62,6 +72,7 @@ h3 {
     background-color: #2f0035;
     color: #e4d7a7;
     text-align: center;
+
 
 
 }
@@ -101,7 +112,7 @@ h3 {
 
 .row {
     overflow: hidden;
-    margin-bottom: 20px;
+
 }
 
 .row p {
@@ -120,6 +131,8 @@ h3 {
     float: left;
     width: 48.93%;
 }
+
+
 
 .col8:last-of-type {
     float: right;
@@ -154,6 +167,7 @@ h3 {
 }
 
 main {
+    padding: 20px;
     width: 62%;
     float: left;
 }
@@ -163,6 +177,14 @@ aside {
     width: 35%;
     /* height: 400px; */
     /* background-color: #919ec9; */
+}
+
+.blog aside li,
+.category aside li,
+.search aside li,
+.archive aside li,
+.post-template-default aside li {
+    margin-bottom: 5px;
 }
 
 .inner-widget h3 {
@@ -178,6 +200,10 @@ aside {
     background-color: #D3BE73;
     padding: 3%;
 
+}
+
+.inner-tours p {
+    margin-bottom: 0;
 }
 
 .inner-specials {
@@ -208,9 +234,9 @@ aside {
 }
 
 aside a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: #2f0035;
-    padding: 3px 3px;
+    padding: 3px;
 }
 
 aside a:hover {
@@ -218,17 +244,22 @@ aside a:hover {
     border: 2px solid;
     border-radius: 4px;
     box-shadow: 3px 4px 0 #2f0035;
+
 }
 
 .widget-area ul {
     list-style: none;
+    text-decoration: underline;
     margin-left: 5%;
-    margin-bottom: 12px;
+    margin-bottom: 25px;
 }
 
 .widget-area li {
     padding: 4px;
+
 }
+
+
 
 /* this is our hero image */
 #hero {
@@ -256,6 +287,17 @@ main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
     margin-bottom: 15px;
 }
 
+/* this is the image size for images on the blog and catefory pages */
+.blog main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image,
+.category main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image,
+.archive main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image,
+.search main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
 
 .inner-page #hero {
     background-image: url(https://www.nodnarbalivad.com/it270/site1/wp-content/uploads/erdtree.jpeg);
@@ -278,8 +320,10 @@ main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
     max-width: 1200px;
     margin: 20px auto 90px auto;
     color: #2f0035;
-    ;
+
 }
+
+
 
 .error404 #wrapper,
 .search #wrapper {
@@ -328,15 +372,16 @@ footer {
     display: none;
     border: 2px solid #2f0035;
     border-radius: 3px;
+    padding-left: 10px;
 }
 
 .sub-menu li {
     margin: 10px 5px;
 }
 
-.sub-menu a {
+/* .sub-menu a {
     margin: 0 0 0 10px;
-}
+} */
 
 
 
@@ -346,9 +391,10 @@ footer {
     display: block;
     position: absolute;
     background-color: #E9B44C;
-    width: 358px;
-    right: 5px;
-    height: auto;
+    /* max-width: 323px; */
+    width: auto;
+    /* right: 5px; */
+    /* height: auto; */
 
 }
 
@@ -391,10 +437,73 @@ footer {
     margin-bottom: 10px;
 }
 
+/* +++formidable forms css+++ */
+.frm_form_title {
+    font-size: 1.8em !important;
+    background: none !important;
+    padding: 0 !important;
+    color: #2f0035 !important;
+}
+
+.with_frm_style legend + h3,
+.with_frm_style h3.frm_form_title {
+    margin-bottom: 15px !important;
+}
+
+.frm_button_submit {
+    background: none !important;
+    border: 2px solid #2f0035 !important;
+    color: #2f0035 !important;
+}
+
+.frm_button_submit:hover {
+    box-shadow: 3px 4px 0 #2f0035 !important;
+    transition: .05s;
+    background: #ffc900 !important;
+
+}
+
+
+/* +++formidable forms contact form css+++ */
+.frm_fields_container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact .frm_form_title {
+    text-align: center !important;
+}
+
+/* +++ End formidable forms css+++ */
+
 /* End classes and Ids */
 
 
 /* typography */
+blockquote {
+    font-size: 1.75em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 30px 6% 30px 6%;
+    font-style: italic;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.home blockquote + p {
+    font-size: 1.3em;
+    margin: 0 4% 20px 4%;
+}
+
+.home blockquote + p::first-line {
+    color: #73653c;
+    font-weight: bold;
+}
+
+.home blockquote + p + p {
+    font-size: 1.3em;
+    margin: 0 4% 40px 4%;
+}
+
 .home h1 {
     font-size: 3em;
     text-align: center;
@@ -497,9 +606,111 @@ label {
         display: block;
     }
 
+
+}
+
+
+@media only screen and (max-width: 890px) {
+
+
+    .third {
+        width: auto;
+        float: none;
+        margin-right: 0;
+        padding: 0 1%;
+        text-align: center;
+
+    }
+
+    .third img {
+        margin: 0 auto 15px auto;
+        display: block;
+    }
+
+    main {
+        width: 60%;
+    }
+
+    aside {
+        width: 37%;
+    }
+
 }
 
 @media only screen and (max-width: 700px) {
+
+    header {
+        padding-top: 15px;
+    }
+
+    body {
+        font-size: 93%;
+    }
+
+    .home #hero {
+        margin-top: 50px;
+    }
+
+    .inner-page #hero img {
+        display: none;
+    }
+
+    main,
+    aside {
+        float: none;
+        width: auto;
+    }
+
+    #wrapper {
+        margin: 13px;
+    }
+
+    .search #wrapper {
+        margin: 120px 13px 20px 13px;
+    }
+
+    .col8 {
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+
+    .col8:last-of-type {
+        float: none;
+    }
+
+    .col8 img {
+        margin-bottom: 15px;
+    }
+
+
+
+    .blog main,
+    .search main,
+    .blog aside,
+    .archive main {
+        text-align: center;
+    }
+
+    .inner-footer ul {
+        height: auto;
+        line-height: inherit;
+
+    }
+
+    .inner-footer a {
+        color: #ffc900;
+
+    }
+
+    .inner-footer li {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+
 
     /* Navigation Button
 	-------------------------------------------------------- */
@@ -592,7 +803,15 @@ label {
         width: auto;
         position: static;
 
-        padding: 0;
+        padding: 5px;
+    }
+
+    #top #searchform {
+        float: none;
+        position: fixed;
+        top: 15px;
+        right: 10px;
+        z-index: 1000;
     }
 
     /* End my nav styles */

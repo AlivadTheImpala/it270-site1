@@ -174,3 +174,14 @@ add_shortcode('current_date', 'today_date');
 
 add_filter( 'widget_text' , 'do_shortcode' );
 	
+remove_filter('the_content','wpautop');
+
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+    global $post;
+    if ( isset( $post ) ) {
+    $classes[] = $post->post_name;
+    }
+    return $classes;
+    }
+    add_filter( 'body_class', 'add_slug_body_class' );
